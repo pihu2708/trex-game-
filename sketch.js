@@ -56,9 +56,9 @@ function draw(){
   background(180)
   textSize(16)
   text("Score: "+score,width-100,50)
-  if(gamestate==="serve"&&keyDown("space") ){
+  if(gamestate==="serve"&&(keyDown("space")||touches.length>0) ){
     gamestate= "play"
-
+touches = []
   }
 
   trex.collide(ground2)
